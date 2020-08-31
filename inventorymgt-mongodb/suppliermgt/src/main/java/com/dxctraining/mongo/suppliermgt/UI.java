@@ -28,9 +28,11 @@ public class UI {
 		String id2 = supplier2.getId();
 		displaySupplierById(id2);
 
+		
 	}
 
 	public void displayAll() {
+		System.out.println("---Inside displayAll---");
 		List<Supplier> list = service.findAll();
 		for (Supplier supplier : list) {
 			displaySupplier(supplier);
@@ -38,6 +40,7 @@ public class UI {
 	}
 
 	public Supplier createSupplier(Supplier supplier) {
+		System.out.println("---Inside createSupplier---");
 		supplier = service.save(supplier);
 		displaySupplier(supplier);
 		return supplier;
@@ -49,7 +52,16 @@ public class UI {
 	}
 
 	public void displaySupplierById(String id) {
+		System.out.println("---Inside displaySupplierById---");
 		Supplier supplier = service.findById(id);
 		displaySupplier(supplier);
+	}
+	
+	public void displaySupplierByName(String name) {
+		System.out.println("---Inside displaySupplierByName---");
+		List<Supplier>list=service.findByName(name);
+		for(Supplier supplier:list) {
+			displaySupplier(supplier);
+		}
 	}
 }

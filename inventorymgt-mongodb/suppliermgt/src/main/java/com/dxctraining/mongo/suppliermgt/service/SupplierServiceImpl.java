@@ -10,7 +10,7 @@ import com.dxctraining.mongo.suppliermgt.dao.*;
 import com.dxctraining.mongo.suppliermgt.entities.*;
 import com.dxctraining.mongo.suppliermgt.exception.SupplierNotFoundException;
 
-@Service
+//@Service
 public class SupplierServiceImpl implements ISupplierService {
 
 	@Autowired
