@@ -3,8 +3,7 @@
 .project
 *.iml
 .idea
-bin
-test 
+bin 
 **/target
 
 
